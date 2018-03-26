@@ -9,10 +9,9 @@ def main():
     now = datetime.now()
     diff = now - decision
     diff_week = int(diff.days / 7)
-    print(diff_week)
-    # requests.post(WEB_HOOK_URL, json={"text": "############"})
-    # requests.post(WEB_HOOK_URL, json={"text": "{0}週間が経過しました。".format(diff_week)})
-    # requests.post(WEB_HOOK_URL, json={"text": "############"})
+    requests.post(WEB_HOOK_URL, json={"text": "################################################"})
+    requests.post(WEB_HOOK_URL, json={"text": "キャビティ計算をすると宣言してから{0}週間が経過しました。".format(diff_week)})
+    requests.post(WEB_HOOK_URL, json={"text": "################################################"})
 
 
 if __name__ == "__main__":
